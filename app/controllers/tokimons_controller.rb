@@ -4,7 +4,7 @@ class TokimonsController < ApplicationController
   # GET /tokimons
   # GET /tokimons.json
   def index
-    @tokimons = Tokimon.all
+    @tokimon = Tokimon.all
   end
 
   # GET /tokimons/1

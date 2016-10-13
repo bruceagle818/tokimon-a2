@@ -4,7 +4,7 @@ class TrainersController < ApplicationController
   # GET /trainers
   # GET /trainers.json
   def index
-    @trainers = Trainer.all
+    @trainer = Trainer.all
   end
 
   # GET /trainers/1
