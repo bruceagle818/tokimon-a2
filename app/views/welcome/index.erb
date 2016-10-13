@@ -1,8 +1,74 @@
-<div class="jumbotron text-center">
-  <div class="container">
-    <h1>Getting Started with Ruby on Heroku</h1>
-    <p>This is a sample Ruby application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-ruby"><span class="glyphicon glyphicon-flash"></span> Getting Started with Ruby</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/ruby-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
+<body>
+
+  <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+        </li>
+        <li>
+          <a href="https://devcenter.heroku.com/articles/how-heroku-works"><span class="glyphicon glyphicon-user"></span> How Heroku Works</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Getting Started Guides <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="https://devcenter.heroku.com/articles/getting-started-with-ruby">Getting Started with Ruby on Heroku</a></li>
+              <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started with Node on Heroku</a></li>
+              <li><a href="https://devcenter.heroku.com/articles/getting-started-with-php">Getting Started with PHP on Heroku</a></li>
+              <li><a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started with Python on Heroku</a></li>
+              <li><a href="https://devcenter.heroku.com/articles/getting-started-with-java">Getting Started with Java on Heroku</a></li>
+              <li><a href="https://devcenter.heroku.com/articles/getting-started-with-go">Getting Started with Go on Heroku</a></li>
+              <li><a href="https://devcenter.heroku.com/articles/getting-started-with-clojure">Getting Started with Clojure on Heroku</a></li>
+              <li><a href="https://devcenter.heroku.com/articles/getting-started-with-scala">Getting Started with Scala on Heroku</a></li>
+              <li class="divider"></li>
+              <li><a href="https://devcenter.heroku.com/articles/getting-started-with-heroku-and-connect-without-local-dev">Getting Started on Heroku with Heroku Connect</a></li>
+              <li><a href="https://devcenter.heroku.com/articles/getting-started-with-jruby">Getting Started with Ruby on Heroku (Microsoft Windows)</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="navbar-right">
+          <a href="https://devcenter.heroku.com"><span class="glyphicon glyphicon-book"></span> Heroku Dev Center</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h4>Trainers</h4><br>
+      <h5>Click on the trainer's name to view more status!</h5>
+
+        <table  class="trainers_table" align="center">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Level</th>
+              <th># of Tokimons</th>
+              <th colspan="2"></th>
+            </tr>
+          </thead>
+
+
+          <tbody>
+            <% @trainers.each do |trainer| %>
+              <tr class="<%= cycle('oddline', 'evenline') %>">
+                <td><%= trainer.pname %></td>
+                <td><%= trainer.level %></td>
+                <td><%= trainer.numberoftokimons %></td>
+                <td><%= link_to 'View&Edit |', trainer %></td>
+                <td><%= link_to '| Delete', trainer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+        </tbody>
+      </table>
+
+      <div class="btns">
+    		<%= link_to 'New Trainer', new_trainer_path %>
+      </div>
+
+
+
+    </div>
   </div>
-</div>
+</body>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pname:</strong>
+  <%= @trainer.pname %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @trainer.level %>
+</p>
+
+<p>
+  <strong>Number of Tokimons:</strong>
+  <%= @trainer.numberoftokimons %>
+</p>
+
+<%= link_to 'Edit', edit_trainer_path(@trainer) %> |
+<%= link_to 'Back',  controller: 'welcome'%>
