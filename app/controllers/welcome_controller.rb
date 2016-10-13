@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
 
   # GET /welcome
   def index
-    @trainers = Trainer.all
+    @trainer = Trainer.all
   end
 
 
