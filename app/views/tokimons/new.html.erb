@@ -1,5 +1,58 @@
-<h1>New Tokimon</h1>
+<div class="new_container text-center">
 
-<%= render 'form' %>
+  <h1>New Tokimon</h1>
 
-<%= link_to 'Back', tokimons_path %>
+  <form class="new_tokimon" id="new_tokimon" action="/tokimons" accept-charset="UTF-8" method="post"><input name="utf8" value="✓" type="hidden"><input name="authenticity_token" value="mqdK1zbetVRU2IahRJs6MHEtkm+LQMUI2hM2zM72BGMKCZGyEc+/JJiagr1uyD1CoxBg1ldmZtEtjjdZIAmnbA==" type="hidden">
+
+    <div class="field">
+      <label for="tokimon_tname">Tname</label><br>
+      <input name="tokimon[tname]" id="tokimon_tname" type="text">
+    </div>
+    <div class="field">
+      <label for="tokimon_weight">Weight</label><br>
+      <input name="tokimon[weight]" id="tokimon_weight" type="number">
+    </div>
+    <div class="field">
+      <label for="tokimon_height">Height</label><br>
+      <input name="tokimon[height]" id="tokimon_height" type="number">
+    </div>
+    <div class="field">
+      <label for="tokimon_fly">Fly</label><br>
+      <input name="tokimon[fly]" id="tokimon_fly" type="number">
+    </div>
+    <div class="field">
+      <label for="tokimon_fight">Fight</label><br>
+      <input name="tokimon[fight]" id="tokimon_fight" type="number">
+    </div>
+    <div class="field">
+      <label for="tokimon_fire">Fire</label><br>
+      <input name="tokimon[fire]" id="tokimon_fire" type="number">
+    </div>
+    <div class="field">
+      <label for="tokimon_water">Water</label><br>
+      <input name="tokimon[water]" id="tokimon_water" type="number">
+    </div>
+    <div class="field">
+      <label for="tokimon_electric">Electric</label><br>
+      <input name="tokimon[electric]" id="tokimon_electric" type="number">
+    </div>
+    <div class="field">
+      <label for="tokimon_frozen">Frozen</label><br>
+      <input name="tokimon[frozen]" id="tokimon_frozen" type="number">
+    </div>
+    <div class="field">
+      <label for="tokimon_wind">Wind</label><br>
+      <input name="tokimon[wind]" id="tokimon_wind" type="number">
+    </div>
+    <div class="field">
+      <label for="tokimon_trainer_id">Trainer</label><br>
+      <input name="tokimon[trainer_id]" id="tokimon_trainer_id" type="number" >
+    </div>
+    <div class="actions">
+      <input name="commit" value="Create Tokimon" type="submit">
+    </div>
+  </form>
+
+  <%= link_to 'Back', controller: 'tokimons' %>
+
+</div>

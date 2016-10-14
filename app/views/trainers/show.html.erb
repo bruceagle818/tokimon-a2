@@ -1,4 +1,4 @@
-<div class="new_trainer_container text-center">
+<div class="new_container text-center">
   <p id="notice"><%= notice %></p>
 
   <p>
@@ -15,8 +15,11 @@
     <strong>Number of Tokimons:</strong>
     <%= @trainer.numberoftokimons %>
   </p>
+
+
  <div class="actions">
+   <%= link_to 'Add Tokimon', new_tokimon_path %> <br><br>
    <%= link_to 'Edit', edit_trainer_path(@trainer) %> |
-   <%= link_to 'Back',  controller: 'welcome'%>
+   <%= link_to 'Back',  controller: 'trainers'%>
  </div>
 </div>

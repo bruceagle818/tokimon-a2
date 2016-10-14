@@ -1,8 +1,32 @@
+<body>
+
+  <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+        </li>
+        <li>
+          <a href="https://devcenter.heroku.com/articles/how-heroku-works"><span class="glyphicon glyphicon-user"></span> How Heroku Works</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="navbar-right">
+          <a href="https://devcenter.heroku.com"><span class="glyphicon glyphicon-book"></span> Heroku Dev Center</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center">
+    <div class="container">
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Tokimons</h1>
+<h4>Tokimons</h4><br>
+<h5>Click view|edit view more status!</h5>
 
-<table>
+<table class="tokimons_table" >
   <thead>
     <tr>
       <th>Tname</th>
@@ -21,7 +45,7 @@
   </thead>
 
   <tbody>
-    <% @tokimons.each do |tokimon| %>
+    <% @tokimon.each do |tokimon| %>
       <tr>
         <td><%= tokimon.tname %></td>
         <td><%= tokimon.weight %></td>
@@ -42,6 +66,13 @@
   </tbody>
 </table>
 
+
 <br>
 
 <%= link_to 'New Tokimon', new_tokimon_path %>
+
+
+
+    </div>
+  </div>
+</body>

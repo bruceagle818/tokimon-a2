@@ -1,31 +1,58 @@
-<p id="notice"><%= notice %></p>
+<body>
 
-<h1>Listing Trainers</h1>
+  <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+        </li>
+        <li>
+          <a href="https://devcenter.heroku.com/articles/how-heroku-works"><span class="glyphicon glyphicon-user"></span> How Heroku Works</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="navbar-right">
+          <a href="https://devcenter.heroku.com"><span class="glyphicon glyphicon-book"></span> Heroku Dev Center</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-<table>
-  <thead>
-    <tr>
-      <th>Pname</th>
-      <th>Level</th>
-      <th>Numberoftokimons</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h4>Trainers</h4><br>
+      <h5>Click on the trainer's name to view more status!</h5>
 
-  <tbody>
-    <% @trainer.each do |trainer| %>
-      <tr>
-        <td><%= trainer.pname %></td>
-        <td><%= trainer.level %></td>
-        <td><%= trainer.numberoftokimons %></td>
-        <td><%= link_to 'Show', trainer %></td>
-        <td><%= link_to 'Edit', edit_trainer_path(trainer) %></td>
-        <td><%= link_to 'Destroy', trainer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <table  class="trainers_table" align="center">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Level</th>
+              <th># of Tokimons</th>
+              <th colspan="2"></th>
+            </tr>
+          </thead>
 
-<br>
 
-<%= link_to 'New Trainer', new_trainer_path %>
+          <tbody>
+            <% @trainer.each do |trainer| %>
+              <tr class="<%= cycle('oddline', 'evenline') %>">
+                <td><%= trainer.pname %></td>
+                <td><%= trainer.level %></td>
+                <td><%= trainer.numberoftokimons %></td>
+                <td><%= link_to 'View&Edit |', trainer %></td>
+                <td><%= link_to '| Delete', trainer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+        </tbody>
+      </table>
+
+      <div class="btns">
+    		<%= link_to 'New Trainer', new_trainer_path %>
+      </div>
+
+
+
+    </div>
+  </div>
+</body>
