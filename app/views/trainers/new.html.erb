@@ -13,10 +13,11 @@
         <input type="number" name="trainer[numberoftokimons]" id="trainer_numberoftokimons">
       </div><br>
 
-      <input class="create_button" type="submit" name="commit" value="Create Trainer">
+      <input class="create_button" type="submit" name="commit" value="Create Trainer"><br>
+
+      <div class="actions">
+        <%= link_to 'Back', controller: 'welcome'%>
+      </div>
     </form>
 
-    <div class="actions">
-      <%= link_to 'Back', controller: 'welcome'%>
-    </div>
 </div>
