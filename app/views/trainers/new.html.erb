@@ -1,5 +1,22 @@
-<h1>New Trainer</h1>
+<div class="new_trainer_container text-center">
 
-<%= render 'form' %>
+    <h1>New Trainer</h1>
 
-<%= link_to 'Back', controller: 'welcome'%>
+    <form class="new_trainer" id="new_trainer" action="/trainers" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="FGuzuhDlHZduT8bus4I0LnyrFIHYsY9rcc19xw9Bm81KBJhXMgs++wv9E+GSOSI8L1fYUWRJrtooyInb21AEog==">
+
+      <div class="field">
+        <label for="trainer_Trainer's name">Trainer's name</label><br>
+        <input type="text" name="trainer[pname]" id="trainer_pname">
+      </div>
+      <div class="field">
+        <label for="trainer_Number Of Tokimons">Number of tokimons</label><br>
+        <input type="number" name="trainer[numberoftokimons]" id="trainer_numberoftokimons">
+      </div><br>
+
+      <input class="create_button" type="submit" name="commit" value="Create Trainer">
+    </form>
+
+    <div class="actions">
+      <%= link_to 'Back', controller: 'welcome'%>
+    </div>
+</div>

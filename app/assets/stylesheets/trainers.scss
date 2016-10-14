@@ -1,3 +1,65 @@
 // Place all the styles related to the Trainers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$brand-primary: #a6192e;
+$dark_gray-primary: #202020;
+$brand-language: #B01302;
+
+.new_trainer_container{
+  margin-top: -30px;
+  background: $brand-primary;
+  color: white;
+  display: inline-block;
+  width: 400px;
+  padding: 50px;
+  box-shadow: 0px 5px 6px 2px rgba(0,0,0,0.36);
+  border-radius: 30px;
+}
+
+label{
+  margin-top: 35px;
+}
+
+input{
+  color: black;
+}
+
+.field{
+    margin: 20px;
+}
+
+p{
+  margin-bottom: 30px;
+}
+
+.create_button{
+  margin-bottom: 30px;
+  border-radius: 2px;
+  box-shadow: 0px 5px 6px 2px rgba(0,0,0,0.36);
+  border: 0px;
+  background: lighten($dark_gray-primary, 5%);
+  &:hover {
+    background: lighten($dark_gray-primary, 60%);
+    }
+  color: #cfcfc9;
+    &:hover{
+    color: #22457c;
+    }
+}
+    .actions {
+      border-radius: 2px;
+      box-shadow: 0px 5px 6px 2px rgba(0,0,0,0.36);
+      width: 80px;
+      text-align: center;
+      display: inline-block;
+      background: lighten($dark_gray-primary, 5%);
+      &:hover {
+        background: lighten($dark_gray-primary, 60%);
+      }
+    }
+    a {
+      color: #cfcfc9;
+      &:hover{
+        color: #22457c;
+      }
+    }

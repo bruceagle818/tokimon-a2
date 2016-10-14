@@ -1,19 +1,22 @@
-<p id="notice"><%= notice %></p>
+<div class="new_trainer_container text-center">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Pname:</strong>
-  <%= @trainer.pname %>
-</p>
+  <p>
+    <strong>Pname:</strong>
+    <%= @trainer.pname %>
+  </p>
 
-<p>
-  <strong>Level:</strong>
-  <%= @trainer.level %>
-</p>
+  <p>
+    <strong>Level:</strong>
+    <%= @trainer.level %>
+  </p>
 
-<p>
-  <strong>Number of Tokimons:</strong>
-  <%= @trainer.numberoftokimons %>
-</p>
-
-<%= link_to 'Edit', edit_trainer_path(@trainer) %> |
-<%= link_to 'Back',  controller: 'welcome'%>
+  <p>
+    <strong>Number of Tokimons:</strong>
+    <%= @trainer.numberoftokimons %>
+  </p>
+ <div class="actions">
+   <%= link_to 'Edit', edit_trainer_path(@trainer) %> |
+   <%= link_to 'Back',  controller: 'welcome'%>
+ </div>
+</div>
