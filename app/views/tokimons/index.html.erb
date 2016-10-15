@@ -6,20 +6,15 @@
         <li class="active">
           <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
         </li>
-        <li>
-          <a href="https://devcenter.heroku.com/articles/how-heroku-works"><span class="glyphicon glyphicon-user"></span> How Heroku Works</a>
-        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="navbar-right">
-          <a href="https://devcenter.heroku.com"><span class="glyphicon glyphicon-book"></span> Heroku Dev Center</a>
-        </li>
+
       </ul>
     </div>
   </nav>
 
-  <div class="jumbotron text-center">
-    <div class="container">
+<div class="jumbotron_tokimon text-center">
+  <div class="container">
 
 <p id="notice"><%= notice %></p>
 
@@ -29,7 +24,7 @@
 <table class="tokimons_table" >
   <thead>
     <tr>
-      <th>Tname</th>
+      <th>Tokimon</th>
       <th>Weight</th>
       <th>Height</th>
       <th>Fly</th>
@@ -46,7 +41,7 @@
 
   <tbody>
     <% @tokimon.each do |tokimon| %>
-      <tr>
+      <tr class="<%= cycle('oddline', 'evenline') %>">
         <td><%= tokimon.tname %></td>
         <td><%= tokimon.weight %></td>
         <td><%= tokimon.height %></td>
@@ -58,9 +53,9 @@
         <td><%= tokimon.frozen %></td>
         <td><%= tokimon.wind %></td>
         <td><%= tokimon.trainer_id %></td>
-        <td><%= link_to 'Show', tokimon %></td>
-        <td><%= link_to 'Edit', edit_tokimon_path(tokimon) %></td>
-        <td><%= link_to 'Destroy', tokimon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show |', tokimon %></td>
+        <td><%= link_to '| Edit |', edit_tokimon_path(tokimon) %></td>
+        <td><%= link_to '| Destroy', tokimon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

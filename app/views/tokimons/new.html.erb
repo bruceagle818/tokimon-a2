@@ -5,6 +5,9 @@
   <form class="new_tokimon" id="new_tokimon" action="/tokimons" accept-charset="UTF-8" method="post"><input name="utf8" value="✓" type="hidden"><input name="authenticity_token" value="mqdK1zbetVRU2IahRJs6MHEtkm+LQMUI2hM2zM72BGMKCZGyEc+/JJiagr1uyD1CoxBg1ldmZtEtjjdZIAmnbA==" type="hidden">
 
     <div class="field">
+      <strong>Tokimon's ID:</strong>
+      <%= @tokimon.trainer_id %>
+
       <label for="tokimon_tname">Tname</label><br>
       <input name="tokimon[tname]" id="tokimon_tname" type="text">
     </div>
@@ -46,7 +49,7 @@
     </div>
     <div class="field">
       <label for="tokimon_trainer_id">Trainer</label><br>
-      <input name="tokimon[trainer_id]" id="tokimon_trainer_id" type="number" >
+      <input name="tokimon[trainer_id]" id="tokimon_trainer_id" type="number">
     </div>
     <div class="actions">
       <input name="commit" value="Create Tokimon" type="submit">
